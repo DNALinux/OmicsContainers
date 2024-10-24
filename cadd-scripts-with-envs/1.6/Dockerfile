@@ -2,9 +2,9 @@ FROM mambaorg/micromamba:1.5.3
 
 ARG CADD_VERSION=1.6
 
-MAINTAINER "Marius Bjoernstad" <pmb@fa2k.net>
 LABEL software="cadd-scripts-with-envs" \
     software.version="${CADD_VERSION}" \
+    maintainer="Marius Bjoernstad <pmb@fa2k.net>" \
     version="1" \
     about.summary="CADD is a tool for scoring the deleteriousness of single nucleotide variants as well as insertion/deletions variants in the human genome" \
     about.home="https://cadd.gs.washington.edu/" \

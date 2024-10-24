@@ -8,6 +8,9 @@
 ################################################
 
 FROM python:3.10-slim-bullseye
+
+LABEL maintainer="Sebastian Bassi <sebastian@toyoko.io>"
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 
@@ -57,6 +60,3 @@ RUN orthofinder -f ${ORTHOFINDER_PATH}/ExampleData/
 ########################## clean source file #################################
 
 RUN rm /opt/${ORTHOFINDER_FILE_NAME}
-
-###############################################################
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>

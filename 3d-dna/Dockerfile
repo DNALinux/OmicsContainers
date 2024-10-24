@@ -5,12 +5,12 @@ LABEL software="3d-dna" \
     about.summary="" \ 
     about.home="https://github.com/aidenlab/3d-dna" \ 
     software.version="180922" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     upstream.version="180922" \ 
     version="1" \ 
     about.copyright="Dudchenko, O., Batra, S.S., Omer, A.D., Nyquist, S.K., Hoeger, M., Durand, N.C., Shamim, M.S., Machol, I., Lander, E.S., Aiden, A.P., et al." \ 
     about.license="MIT" \ 
-    dockerfile.author="Sebastian Bassi <sebastian@toyoko.io>" \
-     about.tags=""
+    about.tags=""
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive

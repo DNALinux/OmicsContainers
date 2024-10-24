@@ -1,7 +1,7 @@
 ## Stage for build cvtree
 FROM alpine AS dev
 LABEL Version=0.2 \
-  MAINTAINER="Sebastian Bassi <sebastian@toyoko.io>"\
+  maintainer="Sebastian Bassi <sebastian@toyoko.io>"\
   description="Docker image for CVTree" 
 
 # Original author: Dr. Guanghong Zuo

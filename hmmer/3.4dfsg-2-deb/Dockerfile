@@ -1,6 +1,7 @@
 FROM debian:trixie-slim
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
+
 LABEL    software="hmmer" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     base_image="debian:trixie-slim" \ 
     container="hmmer" \ 
     about.summary="profile hidden Markov models for protein sequence analysis" \ 

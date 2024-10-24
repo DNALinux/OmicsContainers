@@ -1,7 +1,7 @@
 FROM debian:trixie-slim
 
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
 LABEL    software="pilon" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     base_image="debian:trixie-slim" \ 
     container="pilon" \ 
     about.summary="automated genome assembly improvement and variant detection tool" \ 

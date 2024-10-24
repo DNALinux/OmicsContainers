@@ -2,12 +2,11 @@ ARG DASK_VERSION=2023.10.1
 
 FROM oraclelinux:9
 
-MAINTAINER biocontainers <biodocker@gmail.com>
-
 LABEL base_image="oraclelinux:9"
 LABEL version="1"
 LABEL software="Dask"
 LABEL software.version="2023.10.1-py11-ol9"
+LABEL maintainer="Biocontainers <biodocker@gmail.com>"
 LABEL about.summary="Dask is a flexible library for parallel computing in Python."
 LABEL about.home="https://www.dask.org"
 LABEL about.license="BSD-3-Clause"

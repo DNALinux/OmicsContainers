@@ -1,6 +1,7 @@
 FROM debian:trixie-slim
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
+
 LABEL    software="trimmomatic" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     base_image="debian:trixie-slim" \ 
     container="trimmomatic" \ 
     about.summary="flexible read trimming tool for Illumina NGS data" \ 

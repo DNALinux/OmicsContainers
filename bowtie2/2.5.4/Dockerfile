@@ -1,6 +1,7 @@
 FROM continuumio/miniconda3
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
-LABEL    software="bowtie2"
+
+LABEL    software="bowtie2" \
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>"
 
 ARG software_version=2.5.4
 

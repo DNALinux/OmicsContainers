@@ -1,6 +1,7 @@
 FROM debian:trixie-slim
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
+
 LABEL    software="fastqc" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     base_image="debian:trixie-slim" \ 
     container="fastqc" \ 
     about.summary="quality control for high throughput sequence data" \ 

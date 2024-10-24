@@ -1,7 +1,7 @@
 FROM debian:bookworm
 
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
 LABEL    software="primer3" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     container="primer3" \ 
     about.summary="tool to design flanking oligo nucleotides for DNA amplification" \ 
     about.home="http://primer3.sourceforge.net" \ 

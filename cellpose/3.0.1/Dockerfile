@@ -4,15 +4,13 @@ LABEL base_image="python:3.11"
 LABEL version="1"
 LABEL software="cellpose"
 LABEL software.version="3.0.1"
+LABEL maintainer="Yi Sun <sunyi000@gmail.com>, Florian Wuennemann <flowuenne@gmail.com>"
 LABEL about.summary="A generalist algorithm for cell and nucleus segmentation."
 LABEL about.home="https://github.com/MouseLand/cellpose"
 LABEL about.license="BSD-3-Clause"
 LABEL about.license_file="https://github.com/MouseLand/cellpose/blob/main/LICENSE"
 LABEL about.documentation="https://cellpose.readthedocs.io/en/latest/"
 LABEL extra.identifiers.biotools=cellpose
-
-MAINTAINER Yi Sun <sunyi000@gmail.com>
-MAINTAINER Florian Wuennemann <flowuenne@gmail.com>
 
 ARG DEBIAN_FRONTEND="noninteractive"
 ARG CELLPOSE_VERSION="3.0.1"

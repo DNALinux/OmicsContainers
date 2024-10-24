@@ -6,14 +6,12 @@ LABEL base_image="biocontainers:v1.2.0_cv2"
 LABEL version="1"
 LABEL software="evidential-gene"
 LABEL software.version="23jul15"
+LABEL maintainer="Avani Bhojwani <avani.bhojwani@gmail.com>"
 LABEL about.summary="EvidentialGene is a genome informatics project for Evidence Directed Gene Construction for Eukaryotes"
 LABEL about.home="http://arthropods.eugenes.org/EvidentialGene/evigene/"
 LABEL about.documentation="http://arthropods.eugenes.org/EvidentialGene/evigene/docs/"
 LABEL about.license_file="http://arthropods.eugenes.org/about/about-EvidentialGene/"
 LABEL about.tags="Genomics, Transcriptomics"
-
-################## MAINTAINER ######################
-MAINTAINER Avani Bhojwani <avani.bhojwani@gmail.com>
 
 ################## INSTALLATION ######################
 

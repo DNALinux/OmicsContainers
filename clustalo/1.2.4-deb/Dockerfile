@@ -1,10 +1,10 @@
 FROM debian:trixie-slim
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
 
 LABEL version="1.2.4"
 LABEL about.summary="Making accurate alignments of many protein sequences"
 LABEL software="Clustal Omega"
 LABEL software.version="1.2.4"
+LABEL maintainer="Sebastian Bassi <sebastian@toyoko.io>"
 LABEL about.tags="Genomics"
 LABEL about.home="http://www.clustal.org/omega/"
 LABEL about.license="GPL-3.0"

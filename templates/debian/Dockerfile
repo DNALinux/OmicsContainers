@@ -20,7 +20,7 @@ LABEL    software="biopython" \
     about.copyright=" 2002-2009 Biopython contributors" \ 
     about.license="other" \ 
     about.license_file="/usr/share/doc/biopython/copyright" \
-    dockerfile.maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     about.tags=""
 
 USER root

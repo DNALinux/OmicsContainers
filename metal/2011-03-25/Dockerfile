@@ -2,7 +2,7 @@ FROM debian:bullseye-slim
 
 
 LABEL    software="Metal" \ 
-    MAINTAINER="Sebastian Bassi <sebastian@toyoko.io>" \
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     base_image="debian:bullseye-slim" \ 
     about.summary="METAL is designed to facilitate meta-analysis of large datasets (such as several whole genome scans)" \ 
     about.home="https://csg.sph.umich.edu/abecasis/Metal/index.html" \ 
