@@ -1,6 +1,7 @@
 FROM debian:trixie-slim
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
+
 LABEL    software="bedtools" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     base_image="trixie:slim" \ 
     container="bedtools" \ 
     about.summary="suite of utilities for comparing genomic features" \ 

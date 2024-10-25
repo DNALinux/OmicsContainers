@@ -19,10 +19,6 @@ LABEL about.license="AGPL-3.0-only"
 LABEL about.license_file="see also licenses at $RSAT/public_html/motif_databasess"
 LABEL maintainer="rsat-developers@list01.bio.ens.psl.eu"
 
-## <----- maintainers 
-
-MAINTAINER "rsat-developers@list01.bio.ens.psl.eu" 
-
 ##  <---- Prevent to open interactive dialogs during the installation process
 ENV DEBIAN_FRONTEND=noninteractive
 

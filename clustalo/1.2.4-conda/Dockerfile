@@ -8,13 +8,11 @@ LABEL version="1"
 LABEL about.summary="making accurate alignments of many protein sequences"
 LABEL software="Clustal Omega"
 LABEL software.version="1.2.4"
+LABEL maintainer="Sebastian Bassi <sebastian@toyoko.io>"
 LABEL about.tags="Genomics"
 LABEL about.home="http://www.clustal.org/omega/"
 LABEL about.license="GPL-3.0"
 LABEL about.author="Sievers F, Wilm A, Dineen DG, Gibson TJ, Karplus K, Li W, Lopez R, McWilliam H, Remmert M, Söding J, Thompson JD, Higgins DG "
-
-################## MAINTAINER ######################
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
 
 RUN conda install -c conda-forge -c bioconda clustalo==1.2.4
 

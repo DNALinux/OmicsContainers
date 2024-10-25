@@ -1,6 +1,7 @@
 FROM debian:bookworm-slim
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
+
 LABEL    software="muscle" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     container="muscle" \ 
     about.summary="Multiple alignment program of protein sequences" \ 
     about.home="http://www.drive5.com/muscle/" \ 

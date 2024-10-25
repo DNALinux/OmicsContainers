@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 ARG version=2.16.0
 
-LABEL maintainer="sebastian@toyoko.io"
+LABEL maintainer="Sebastian Bassi <sebastian@toyoko.io>"
 
 USER root
 

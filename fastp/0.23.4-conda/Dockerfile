@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim
 
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
-LABEL    software="fastp"
+LABEL    software="fastp" \
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>"
 
 ARG software_version=0.23.4
 

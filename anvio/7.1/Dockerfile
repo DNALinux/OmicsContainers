@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim
 
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
-LABEL    software="Anvio"
+LABEL    software="Anvio" \
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>"
 
 ADD anvio71.yaml /tmp
 ADD requirements.txt /tmp

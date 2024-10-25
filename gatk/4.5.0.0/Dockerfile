@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim
 
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
-LABEL    software="gatk"
+LABEL    software="gatk" \
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>"
 
 ARG software_version=4.5.0.0
 

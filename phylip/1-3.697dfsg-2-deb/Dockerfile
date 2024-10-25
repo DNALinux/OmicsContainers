@@ -1,6 +1,7 @@
 FROM debian:bookworm-slim
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
+
 LABEL    software="phylip" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     base_image="biocontainers/biocontainers:vdebian-buster-backports_cv1" \ 
     container="phylip" \ 
     about.summary="package of programs for inferring phylogenies" \ 

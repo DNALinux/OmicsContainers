@@ -1,6 +1,7 @@
 FROM debian:trixie-slim
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
+
 LABEL    software="biopython" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     base_image="biocontainers/biocontainers:vdebian-buster-backports_cv1" \ 
     container="biopython" \ 
     about.summary="Python library for bioinformatics (implemented in Python 3)" \ 

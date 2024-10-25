@@ -1,7 +1,7 @@
 FROM python:3.10.14-slim-bullseye
 
 LABEL    software="spades" \
-    author="Sebastian Bassi <sebastian@toyoko.io>" \
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     base_image="python:3.10.14-slim-bullseye" \
     container="spades" \
     about.summary="genome assembler for single-cell and isolates data sets" \

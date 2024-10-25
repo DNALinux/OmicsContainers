@@ -6,15 +6,13 @@ LABEL base_image="ubuntu:latest"
 LABEL version="2"
 LABEL software="diann"
 LABEL software.version="1.8.1"
+LABEL maintainer="Yasset Perez-Riverol <ypriverol@gmail.com>"
 LABEL about.summary="DIA-NN - a universal software for data-independent acquisition (DIA) proteomics data processing."
 LABEL about.home="https://github.com/vdemichev/DiaNN"
 LABEL about.documentation="https://github.com/vdemichev/DiaNN"
 LABEL about.license_file="https://github.com/vdemichev/DiaNN/LICENSE.txt"
 LABEL about.license="SPDX:CC-BY-NC-4.0"
 LABEL about.tags="Proteomics"
-
-################## MAINTAINER ######################
-MAINTAINER Yasset Perez-Riverol <ypriverol@gmail.com>
 
 ################## INSTALLATION ######################
 

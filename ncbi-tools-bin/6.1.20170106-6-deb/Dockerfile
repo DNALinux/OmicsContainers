@@ -1,6 +1,7 @@
 FROM biocontainers/biocontainers:debian-buster-backports_cv2
-MAINTAINER biocontainers <biodocker@gmail.com>
+
 LABEL    software="ncbi-tools-bin" \ 
+    maintainer="Biocontainers <biodocker@gmail.com>" \
     base_image="biocontainers/biocontainers:debian-buster-backports_cv2" \ 
     container="ncbi-tools-bin" \ 
     about.summary="NCBI libraries for biology applications (text-based utilities)" \ 

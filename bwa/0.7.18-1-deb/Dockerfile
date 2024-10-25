@@ -1,7 +1,7 @@
 FROM debian:trixie-slim
 
-MAINTAINER Sebastian Bassi <sebastian@toyoko.io>
 LABEL    software="bwa" \ 
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     base_image="debian:trixie-slim" \ 
     container="bwa" \ 
     about.summary="Burrows-Wheeler Aligner" \ 
