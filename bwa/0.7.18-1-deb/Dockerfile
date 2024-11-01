@@ -18,4 +18,4 @@ LABEL    software="bwa" \
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y bwa=0.7.18-1-deb && apt-get clean && apt-get purge && rm -rf /var/lib/apt/lists/* /tmp/*
+RUN apt-get update && apt-get install -y bwa=0.7.18-1 && apt-get clean && apt-get purge && rm -rf /var/lib/apt/lists/* /tmp/*
