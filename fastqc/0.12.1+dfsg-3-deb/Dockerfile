@@ -6,7 +6,7 @@ LABEL    software="fastqc" \
     container="fastqc" \ 
     about.summary="quality control for high throughput sequence data" \ 
     about.home="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" \ 
-    software.version="0.12.1dfsg-3-deb" \ 
+    software.version="0.12.1dfsg-4-deb" \ 
     upstream.version="0.12.1" \ 
     version="1" \ 
     extra.identifiers.biotools="fastqc" \ 
@@ -18,4 +18,4 @@ LABEL    software="fastqc" \
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y fastqc=0.12.1 && apt-get clean && apt-get purge && rm -rf /var/lib/apt/lists/* /tmp/*
+RUN apt-get update && apt-get install -y fastqc=0.12.1+dfsg-4 && apt-get clean && apt-get purge && rm -rf /var/lib/apt/lists/* /tmp/*
