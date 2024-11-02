@@ -1,0 +1,29 @@
+FROM debian:trixie-slim
+
+LABEL    software="gatk" \
+    maintainer="Sebastian Bassi <sebastian@toyoko.io>"
+
+ARG software_version=4.6.1.0
+
+RUN apt-get update
+RUN apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+
+ENV PATH="/root/miniconda3/bin:${PATH}"
+ARG PATH="/root/miniconda3/bin:${PATH}"
+RUN apt-get update
+RUN apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+
+RUN if [ $(uname -m) = x86_64 ] ; then arch=x86_64; \
+    elif [ $(uname -m) = aarch64 ] ; then arch=aarch64; \
+    else echo "Architecture $(uname -m) is not supported" >&2; exit 1; \
+    fi && wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-${arch}.sh \
+    && mkdir /root/.conda \
+    && bash Miniconda3-latest-Linux-${arch}.sh -b \
+    && rm -f Miniconda3-latest-Linux-${arch}.sh
+
+RUN conda config --add channels bioconda
+RUN conda config --add channels conda-forge
+RUN conda install gatk4=$software_version -y
+
+CMD ["/bin/sh"]
+WORKDIR /data/
