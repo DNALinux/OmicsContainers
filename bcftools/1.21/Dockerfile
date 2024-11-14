@@ -29,8 +29,7 @@ RUN apt-get update && \
     libcurl4-openssl-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-COPY bcftools-1.21.tar.bz2 /tmp/
-RUN cd /tmp && \
+RUN wget https://github.com/samtools/bcftools/releases/download/1.21/bcftools-1.21.tar.bz2 && \
     tar -xvjf bcftools-1.21.tar.bz2 && \
     cd bcftools-1.21 && \
     ./configure && \
