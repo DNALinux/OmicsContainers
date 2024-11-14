@@ -14,7 +14,7 @@ LABEL    software="bcftools" \
     container="bcftools" \ 
     about.summary="Variant callilng and file manipulation" \ 
     about.home="https://samtools.github.io/bcftools/howtos/index.html" \ 
-    software.version="1.20-deb" \ 
+    software.version="1.20-src" \ 
     upstream.version="1.20" \ 
     version="1" \ 
     about.copyright="Genome Research Ltd" \ 
@@ -25,9 +25,17 @@ LABEL    software="bcftools" \
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt update && apt-get install -y python3-pip python3-venv && apt clean && apt purge && rm -rf /var/lib/apt/lists/* /tmp/*
+RUN apt-get update && \
+    apt-get install -y wget make gcc bzip2 libbz2-dev liblzma-dev zlib1g-dev libcurl4-openssl-dev && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+RUN wget https://github.com/samtools/bcftools/releases/download/1.20/bcftools-1.20.tar.bz2 && \
+    tar -xvjf bcftools-1.20.tar.bz2 && \
+    cd bcftools-1.20 && \
+    ./configure && \
+    make && \
+    make install && \
+    cd .. && \
+    rm -rf bcftools-1.20 bcftools-1.20.tar.bz2
+ENTRYPOINT ["bcftools"]
 
-# Next line creates a venv and install a python module in this venv
-RUN python3 -m venv bcftools && . bcftools/bin/activate && pip install bcftools==1.20
-# Since this is installed in a venv, run with:
-# docker run -it dnalinux/bcftools:1.20 /bcftools/bin/python
