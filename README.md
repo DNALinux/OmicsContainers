@@ -5,6 +5,10 @@ This is a curated colection of containers for bioinformatics. It is based on the
 
 ## FAQ
 
+#### Why another biocontainer project?
+
+The original BioContainers project contains many containers that are over five years old, with outdated bioinformatics software and based on older Linux versions. The goal of Omics Containers is to provide up-to-date software whenever possible, both at the operating system level and for bioinformatics tools. Additionally, it aims to make the containers compatible with multiple architectures when available.
+
 #### How do I use a container? 
 
 You can use it from source and build a docker image. If you don't want to build the image yourself, you can pull it from [Docker Hub](https://hub.docker.com/repositories/dnalinux).
