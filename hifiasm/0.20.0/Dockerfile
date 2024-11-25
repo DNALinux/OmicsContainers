@@ -4,12 +4,13 @@ FROM debian:bookworm-slim
 LABEL base_image="biocontainers:latest" \
   software="hsfiasm" \
   software.version="0.20.0"
-#  about.summary="The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute to analyze high-throughput sequencing data." \
-#  about.home="https://www.broadinstitute.org/gatk/|https://github.com/broadgsa/gatk-protected/" \
-#  about.license_file="https://github.com/broadgsa/gatk-protected/blob/master/licensing/protected_license.txt" \
-#  about.license="SPDX:BSD-3-Clause" \
-#  about.tags="Genomics" 
-ENV DEBIAN_FRONTEND=noninteractive
+  about.summary="Hifiasm is a haplotype-resolved de novo assembler designed for HiFi reads." \
+  about.home="https://github.com/chhylp123/hifiasm" \
+  about.documentation="https://github.com/chhylp123/hifiasm/blob/master/LICENSE" \
+  about.license="MIT" \
+  about.tags="bioinformatics, genomics, pacbio" \
+  
+ENV DEBIAN_FRONTEND=noninteractivee
 ################## BEGIN INSTALLATION #######################
 USER root
 
