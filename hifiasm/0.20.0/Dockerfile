@@ -3,7 +3,7 @@ FROM debian:bookworm-slim
 ###################################### METADATA ##############################
 LABEL base_image="biocontainers:latest" \
   software="hsfiasm" \
-  software.version="0.20.0"
+  software.version="0.20.0" \
   about.summary="Hifiasm is a haplotype-resolved de novo assembler designed for HiFi reads." \
   about.home="https://github.com/chhylp123/hifiasm" \
   about.documentation="https://github.com/chhylp123/hifiasm/blob/master/LICENSE" \
