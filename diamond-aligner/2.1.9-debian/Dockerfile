@@ -1,8 +1,8 @@
-FROM debian:trixie
+FROM debian:trixie-slim
 
 LABEL \
     software="diamond" \
-    base_image="debian:trixie" \
+    base_image="debian:trixie-slim" \
     container="diamond-aligner" \
     about.summary="DIAMOND is a sequence aligner for protein and translated DNA searches,\
     designed for high performance analysis of big sequence data" \
@@ -18,7 +18,7 @@ LABEL \
 
 USER root
 
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt update && apt-get install -y \
     diamond-aligner=2.1.9-1 \
