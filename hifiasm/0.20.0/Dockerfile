@@ -8,9 +8,9 @@ LABEL base_image="biocontainers:latest" \
   about.home="https://github.com/chhylp123/hifiasm" \
   about.documentation="https://github.com/chhylp123/hifiasm/blob/master/LICENSE" \
   about.license="MIT" \
-  about.tags="bioinformatics, genomics, pacbio" \
+  about.tags="bioinformatics, genomics, pacbio"
   
-ENV DEBIAN_FRONTEND=noninteractivee
+ENV DEBIAN_FRONTEND=noninteractive
 ################## BEGIN INSTALLATION #######################
 USER root
 
@@ -33,4 +33,5 @@ RUN wget ${URL}${VER}.tar.gz && \
     tar xvfz ${VER}.tar.gz && \
     rm ${VER}.tar.gz && \
     cd hifiasm-${VER} && \
-    make
+    make && cd .. && mv hifiasm-${VER}/hifiasm /usr/local/bin/ && \
+    rm -rf hifiasm-${VER}
