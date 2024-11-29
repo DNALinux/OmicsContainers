@@ -8,7 +8,7 @@ LABEL \
     designed for high performance analysis of big sequence data" \
     about.home="https://github.com/bbuchfink/diamond/" \
     software.version="2.1.9-1" \
-    upstream.version="2.1.10" \
+    upstream.version="2.1.9.163" \
     version="2.1.9-1" \
     about.copyright="DIAMOND authors" \
     about.license="GPL-3.0" \
@@ -18,7 +18,6 @@ LABEL \
 
 USER root
 
-# 1 warning found LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 21)
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && apt-get install -y \
@@ -27,7 +26,3 @@ RUN apt update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/* /tmp/*
 
 WORKDIR /data
-
-ENTRYPOINT ["diamond"]
-
-CMD ["--help"]
