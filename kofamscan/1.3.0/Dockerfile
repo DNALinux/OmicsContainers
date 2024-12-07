@@ -20,5 +20,6 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-#RUN git clone https://github.com/takaram/kofam_scan.git
 RUN wget https://github.com/takaram/kofam_scan/archive/refs/tags/v1.3.0.tar.gz && tar xvfz v1.3.0.tar.gz && rm v1.3.0.tar.gz
+
+# run: ./kofam_scan-1.3.0/exec_annotation
