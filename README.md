@@ -44,7 +44,7 @@ Omics Containers is supported by [DNALinux](), [Toyoko](), and a dedicated bioin
 
 #### Is it free?
 
-Yes, every file in this repository is un the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license, unless noted (some files comes with their own license). Using 
+Yes, every file in this repository is un the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license, unless noted (some files comes with their own license). If you run these container in a cloud provider, they may charge you for the computer time needed to run the containers. 
 
 ## Authors
 
