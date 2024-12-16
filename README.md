@@ -1,6 +1,6 @@
 # Omics Containers
 
-This is a curated colection of containers for bioinformatics. It is based on the [BioContainers project](https://github.com/BioContainers/containers). All containers are hosted at [Docker Hub](https://hub.docker.com/repositories/dnalinux).
+This is a curated colection of containers for bioinformatics, developed as part of the [DNALinux] (https://dnalinux.com/) project. It is based on the [BioContainers project](https://github.com/BioContainers/containers). All containers are hosted at [Docker Hub](https://hub.docker.com/repositories/dnalinux).
 
 
 ## FAQ
