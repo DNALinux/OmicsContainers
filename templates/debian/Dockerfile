@@ -1,8 +1,8 @@
 # This template can be used for debian and python programs
-# Use bookworm-slim when possible
+# Use bookworm-slim when possible, trixie only is needed and never sid
 
 # Debian versions:
-# trixie (testing)
+# Debian 13 (trixie) - current testing
 # Debian 12 (bookworm) — current stable release
 # Debian 11 (bullseye) — current oldstable release
 # Debian 10 (buster) — archived release
@@ -31,3 +31,4 @@ RUN apt update && apt-get install -y python3-pip python3-venv && apt clean && ap
 RUN python3 -m venv biopython && . biopython/bin/activate && pip install biopython==1.84
 # Since this is installed in a venv, run with:
 # docker run -it dnalinux/biopython:1.84 /biopython/bin/python
+# To install a Python package outside a environment, use --break-system-packages

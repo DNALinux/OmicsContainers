@@ -1,6 +1,6 @@
 # Omics Containers
 
-This is a curated colection of containers for bioinformatics. It is based on the [BioContainers project](https://github.com/BioContainers/containers). All containers are hosted at [Docker Hub](https://hub.docker.com/repositories/dnalinux).
+This is a curated colection of containers for bioinformatics, developed as part of the [DNALinux](https://dnalinux.com/) project. It is based on the [BioContainers project](https://github.com/BioContainers/containers). All containers are hosted at [Docker Hub](https://hub.docker.com/repositories/dnalinux).
 
 
 ## FAQ
@@ -44,7 +44,7 @@ Omics Containers is supported by [DNALinux](), [Toyoko](), and a dedicated bioin
 
 #### Is it free?
 
-Yes, every file in this repository is un the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license, unless noted (some files comes with their own license). Using 
+Yes, every file in this repository is un the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license, unless noted (some files comes with their own license). If you run these container in a cloud provider, they may charge you for the computer time needed to run the containers. 
 
 ## Authors
 
