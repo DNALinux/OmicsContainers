@@ -15,9 +15,20 @@ LABEL    software="kofamscan" \
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && \
-    apt-get install -y wget ruby hmmer=3.4+dfsg-2 parallel && \
-    apt-get clean && \
+# Variable for architectures
+ARG TARGETARCH
+RUN echo $TARGETARCH
+
+RUN if [ "$TARGETARCH" = "arm64" ]; then \
+        echo "Building for ARM64 architecture"; \
+        export VERSION="3.4+dfsg-2+b1"; \
+    elif [ "$TARGETARCH" = "amd64" ]; then \
+        echo "Building for AMD64 architecture"; \
+        export VERSION="3.4+dfsg-2"; \
+    fi && \
+    apt update && \
+    apt install -y wget ruby hmmer=$VERSION parallel && \
+    apt clean && \
     rm -rf /var/lib/apt/lists/*
 
 RUN wget https://github.com/takaram/kofam_scan/archive/refs/tags/v1.3.0.tar.gz && tar xvfz v1.3.0.tar.gz && rm v1.3.0.tar.gz
