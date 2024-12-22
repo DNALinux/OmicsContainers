@@ -6,6 +6,7 @@ LABEL software="Jellyfish" \
     about.summary="JELLYFISH is a tool for fast, memory-efficient counting of k-mers in DNA" \
     about.home="https://github.com/gmarcais/Jellyfish" \
     software.version="2.3.1-4" \
+    upstream.version="2.3.1" \
     about.copyright="Guillaume Marcais and Carl Kingsford" \
     about.license="Dual-licensed (3-Clause BSD or GPL 3.0)" \
     about.license_file="/usr/share/doc/jellyfish/copyright" \
