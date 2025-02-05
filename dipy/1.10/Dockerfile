@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim
 
 LABEL    software="dipy" \ 
-    base_image="biocontainers/biocontainers:vdebian-buster-backports_cv1" \ 
+    base_image="bookworm-slim" \ 
     container="dipy" \ 
     about.summary="a python package for analyzing diffusion MRI data" \ 
     about.home="https://dipy.org/" \ 
