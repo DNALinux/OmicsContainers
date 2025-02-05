@@ -23,12 +23,19 @@ LABEL    software="dipy" \
     maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     about.tags=""
 
+ARG TARGETARCH    
 USER root
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt update && apt-get install -y python3-pip python3-venv && apt clean && apt purge && rm -rf /var/lib/apt/lists/* /tmp/*
+RUN apt update && apt-get install -y python3-pip python3-venv wget && apt clean && apt purge && rm -rf /var/lib/apt/lists/* /tmp/*
 
-# Next line creates a venv and install a python module in this venv
-RUN python3 -m venv dipy && . dipy/bin/activate && pip install dipy==1.10
-# Since this is installed in a venv, run with:
+RUN if [ "$TARGETARCH" = "amd64" ]; then \
+        echo "Building for x86_64" && \
+        python3 -m venv dipy && . dipy/bin/activate && pip install dipy[all]==1.10 fury ; \
+    elif [ "$TARGETARCH" = "arm64" ]; then \
+        echo "Building for ARM64" && \
+        python3 -m venv dipy && . dipy/bin/activate && pip install dipy==1.10 ;\
+    else \
+        echo "Unsupported architecture: $TARGETARCH" && exit 1; \
+    fi
+
 # docker run -it dnalinux/dipy:1.10 /dipy/bin/python
-# To install a Python package outside a environment, use --break-system-packages
