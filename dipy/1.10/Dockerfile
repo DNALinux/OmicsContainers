@@ -1,12 +1,3 @@
-# This template can be used for debian and python programs
-# Use bookworm-slim when possible, trixie only is needed and never sid
-
-# Debian versions:
-# Debian 13 (trixie) - current testing
-# Debian 12 (bookworm) — current stable release
-# Debian 11 (bullseye) — current oldstable release
-# Debian 10 (buster) — archived release
-
 FROM debian:bookworm-slim
 
 LABEL    software="dipy" \ 
@@ -38,4 +29,5 @@ RUN if [ "$TARGETARCH" = "amd64" ]; then \
         echo "Unsupported architecture: $TARGETARCH" && exit 1; \
     fi
 
+# How to run:
 # docker run -it dnalinux/dipy:1.10 /dipy/bin/python
