@@ -35,7 +35,7 @@ RUN wget https://www.repeatmasker.org/RepeatMasker/RepeatMasker-4.1.6.tar.gz && 
      rm RepeatMasker-4.1.6.tar.gz
 
 
-# run: cd /usr/local/RepeatMasker && perl config
+# run: cd /usr/local/RepeatMasker && perl configure
 
 # /usr/local/trf409.linux64
 # /usr/local/rmblast-2.14.1/bin
