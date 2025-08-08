@@ -2,7 +2,7 @@ FROM debian:trixie-slim
 
 LABEL    software="biopython" \ 
     maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
-    base_image="biocontainers/biocontainers:vdebian-buster-backports_cv1" \ 
+    base_image="debian:trixie-slim" \ 
     container="biopython" \ 
     about.summary="Python library for bioinformatics (implemented in Python 3)" \ 
     about.home="http://biopython.org" \ 
@@ -20,4 +20,4 @@ RUN apt update && apt-get install -y python3-pip python3-venv && apt clean && ap
 RUN python3 -m venv biopython && . biopython/bin/activate && pip install biopython==1.84
 
 # Since this is installed in a venv, run with:
-# docker run -it dnalinux/biopython:1.84 /biopython/bin/python
+# docker run -it dnalinux/biopython:1.84-pip /biopython/bin/python
