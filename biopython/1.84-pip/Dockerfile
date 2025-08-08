@@ -1,8 +1,8 @@
-FROM debian:trixie-slim
+FROM debian:bookworm-slim
 
 LABEL    software="biopython" \ 
     maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
-    base_image="debian:trixie-slim" \ 
+    base_image="debian:bookworm-slim" \ 
     container="biopython" \ 
     about.summary="Python library for bioinformatics (implemented in Python 3)" \ 
     about.home="http://biopython.org" \ 
