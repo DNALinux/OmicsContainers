@@ -11,5 +11,5 @@ LABEL about.license="GPL-3.0"
 LABEL about.author=" Heng Li."
 
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y tabix=1.21+ds-1 && apt-get clean && apt-get purge && rm -rf /var/lib/apt/lists/* /tmp/*
