@@ -16,7 +16,7 @@ RUN if [ $(uname -m) = x86_64 ] ; then arch=x86_64; \
     && bash Miniconda3-latest-Linux-${arch}.sh -b \
     && rm -f Miniconda3-latest-Linux-${arch}.sh
 
-RUN conda config --add channels bioconda && conda config --add channels conda-forge
+RUN conda config --add channels bioconda conda-forge
 RUN conda install fastp=$software_version
 
 CMD ["/bin/sh"]
