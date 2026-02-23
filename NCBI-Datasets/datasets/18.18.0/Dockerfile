@@ -21,3 +21,7 @@ RUN case "$(uname -m)" in \
 
 RUN chmod +x datasets
 
+# HOW TO USE:
+#
+# docker run -it -v $(pwd):/ftmp dnalinux/ncbi-datasets:18.18.0 /bin/bash
+# /datasets download genome taxon "Escherichia coli" --filename /ftmp/ecoli_dataset.zip
