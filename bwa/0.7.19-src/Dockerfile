@@ -42,7 +42,6 @@ COPY --from=builder /tmp/bwa-0.7.19/bwa /usr/local/bin/bwa
 WORKDIR /data
 
 ENTRYPOINT ["bwa"]
-CMD ["--help"]
 
 
 # build:
