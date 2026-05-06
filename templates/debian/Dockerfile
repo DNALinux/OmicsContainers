@@ -1,5 +1,5 @@
 # This template can be used for debian and python programs
-# Use bookworm-slim when possible, trixie only is needed and never sid
+# Use trixie-slim when possible, and never sid
 
 # Debian versions:
 # Debian 13 (trixie) - current testing
