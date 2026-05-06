@@ -10,7 +10,7 @@
 FROM debian:bookworm-slim
 
 LABEL    software="biopython" \ 
-    base_image="biocontainers/biocontainers:vdebian-buster-backports_cv1" \ 
+    base_image="debian:bookworm-slim" \ 
     container="biopython" \ 
     about.summary="Python library for bioinformatics (implemented in Python 3)" \ 
     about.home="http://biopython.org" \ 
