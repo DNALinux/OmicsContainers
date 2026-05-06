@@ -7,10 +7,10 @@
 # Debian 11 (bullseye) — current oldstable release
 # Debian 10 (buster) — archived release
 
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 
 LABEL    software="biopython" \ 
-    base_image="debian:bookworm-slim" \ 
+    base_image="debian:trixie-slim" \ 
     container="biopython" \ 
     about.summary="Python library for bioinformatics (implemented in Python 3)" \ 
     about.home="http://biopython.org" \ 
