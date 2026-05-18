@@ -14,7 +14,20 @@ LABEL    software="spades" \
 
 USER root
 
-RUN apt-get update && apt-get install -y build-essential cmake wget libbz2-dev git libopenmpi-dev openmpi-bin
+RUN apt-get update && apt-get install -y \
+        build-essential \
+        cmake \
+        wget \
+        libbz2-dev \
+        git \
+        libopenmpi-dev \
+        openmpi-bin \
+        python3 \
+        python3-pip \
+        python3-dev \
+        python3-setuptools \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/*
 
 RUN wget https://github.com/ablab/spades/releases/download/v4.2.0/SPAdes-4.2.0.tar.gz
 
