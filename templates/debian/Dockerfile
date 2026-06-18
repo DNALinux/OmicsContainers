@@ -1,10 +1,11 @@
 # This template can be used for debian and python programs
 # Use trixie-slim when possible, and never sid
 # Debian versions:
-# Debian 13 (trixie) - current testing
-# Debian 12 (bookworm) — current stable release
-# Debian 11 (bullseye) — current oldstable release
-# Debian 10 (buster) — archived release
+# Debian 14 (forky) — current testing
+# Debian 13 (trixie) — current stable release
+# Debian 12 (bookworm) — current oldstable release
+# Debian 11 (bullseye) — archived release (Long Term Support)
+# Debian 10 (buster) — archived release (Extended Long Term Support)
 
 FROM debian:trixie-slim
 LABEL    software="biopython" \ 
