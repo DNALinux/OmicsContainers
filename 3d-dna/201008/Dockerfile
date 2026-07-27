@@ -7,6 +7,7 @@ LABEL software="3d-dna" \
     maintainer="Sebastian Bassi <sebastian@toyoko.io>" \
     upstream.version="201008" \ 
     version="201008" \ 
+    oc_version="201008.1" \
     about.copyright="Dudchenko, O., Batra, S.S., Omer, A.D., Nyquist, S.K., Hoeger, M., Durand, N.C., Shamim, M.S., Machol, I., Lander, E.S., Aiden, A.P., et al." \ 
     about.license="MIT" \ 
     about.tags=""
@@ -14,5 +15,5 @@ USER root
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt update && apt-get install -y wget lastz openjdk-21-jdk python3-scipy python3-biopython && apt clean && apt purge && rm -rf /var/lib/apt/lists/* /tmp/*
 RUN wget https://github.com/aidenlab/3d-dna/archive/refs/tags/201008.tar.gz && tar xvfz 201008.tar.gz && rm 201008.tar.gz
-#RUN python3 -m venv biopython && . biopython/bin/activate && pip install biopython==1.84
 
+# Note: 201008.1 is a security only update
