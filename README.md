@@ -2,7 +2,7 @@
 
 # Omics Containers
 
-This is a curated collection of containers for bioinformatics, developed as part of the [DNALinux](https://dnalinux.com/)[^1] project. It is based on the [BioContainers project](https://github.com/BioContainers/containers). All containers are hosted at [Docker Hub](https://hub.docker.com/repositories/dnalinux).
+This is a curated collection of containers for bioinformatics, developed as part of the [DNALinux](https://dnalinux.com/) project. It is based on the [BioContainers project](https://github.com/BioContainers/containers). All containers are hosted at [Docker Hub](https://hub.docker.com/repositories/dnalinux).
 
 
 ## FAQ
@@ -63,5 +63,3 @@ Yes, every file in this repository is un the [Apache 2.0](http://www.apache.org/
 ## Feedback
 
 If you have any feedback, please reach out to us at dnalinux@toyoko.io
-
-[^1]: © 2026. [DNALinux](https://dnalinux.com/) by [Toyoko LLC.](https://www.toyoko.io/) Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries, used by Toyoko LLC under a sublicense from The Linux Foundation.
