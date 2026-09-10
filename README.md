@@ -53,12 +53,14 @@ Yes, every file in this repository is un the [Apache 2.0](http://www.apache.org/
 - [Sebastian Bassi](https://www.github.com/sbassi)
 - [Virginia Gonazalez](https://www.github.com/virmax)
 - [Gretta Yagudayev](https://www.github.com/gyagu98)
+- [Diya Sandeep Nair](https://github.com/diyanair30)
 - [Facundo Mercado](https://www.github.com/Facundo1224)
 
 ## License
 
 [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
+© 2026. [DNALinux](https://dnalinux.com/) by [Toyoko LLC.](https://www.toyoko.io/) Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries, used by Toyoko LLC under a sublicense from The Linux Foundation.
 
 ## Feedback
 
