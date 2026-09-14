@@ -48,6 +48,14 @@ Omics Containers is supported by [DNALinux](https://dnalinux.com/), [Toyoko Bio]
 
 Yes, every file in this repository is un the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license, unless noted (some files comes with their own license). If you run these container in a cloud provider, they may charge you for the computer time needed to run the containers. 
 
+## Related Resources
+
+- **Tonina** — https://github.com/DNALinux/tonina
+- **DNALinux Docker Hub** — https://hub.docker.com/u/dnalinux
+- **DNALinux** — https://dnalinux.com/
+- **Toyoko Bio** — https://toyoko.io/
+- **BioContainers** — https://github.com/BioContainers/containers
+
 ## Authors
 
 - [Sebastian Bassi](https://www.github.com/sbassi)
