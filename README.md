@@ -42,7 +42,7 @@ Open an issue in this repo telling which program you need.
 
 #### Who is behind Omics Containers?
 
-Omics Containers is supported by [DNALinux](), [Toyoko](), and a dedicated bioinformatics community.
+Omics Containers is supported by [DNALinux](), [Toyoko Bio](), and a dedicated bioinformatics community.
 
 #### Is it free?
 
