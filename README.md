@@ -1,3 +1,5 @@
+![An old rock in the desert](/imgs/omics.png) 
+
 # Omics Containers
 
 This is a curated collection of containers for bioinformatics, developed as part of the [DNALinux](https://dnalinux.com/) project. It is based on the [BioContainers project](https://github.com/BioContainers/containers). All containers are hosted at [Docker Hub](https://hub.docker.com/repositories/dnalinux).
@@ -40,25 +42,32 @@ Open an issue in this repo telling which program you need.
 
 #### Who is behind Omics Containers?
 
-Omics Containers is supported by [DNALinux](), [Toyoko](), and a dedicated bioinformatics community.
+Omics Containers is supported by [DNALinux](https://dnalinux.com/), [Toyoko Bio](https://www.toyoko.io/), and a dedicated bioinformatics community.
 
 #### Is it free?
 
 Yes, every file in this repository is un the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license, unless noted (some files comes with their own license). If you run these container in a cloud provider, they may charge you for the computer time needed to run the containers. 
+
+## Related Resources
+
+- **Tonina** — https://github.com/DNALinux/tonina
+- **DNALinux Docker Hub** — https://hub.docker.com/u/dnalinux
+- **DNALinux** — https://dnalinux.com/
+- **Toyoko Bio** — https://toyoko.io/
+- **BioContainers** — https://github.com/BioContainers/containers
 
 ## Authors
 
 - [Sebastian Bassi](https://www.github.com/sbassi)
 - [Virginia Gonazalez](https://www.github.com/virmax)
 - [Gretta Yagudayev](https://www.github.com/gyagu98)
+- [Diya Sandeep Nair](https://github.com/diyanair30)
 - [Facundo Mercado](https://www.github.com/Facundo1224)
 
 ## License
 
 [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-
 ## Feedback
 
 If you have any feedback, please reach out to us at dnalinux@toyoko.io
-
