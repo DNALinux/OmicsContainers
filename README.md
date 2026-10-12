@@ -61,6 +61,7 @@ Yes, every file in this repository is un the [Apache 2.0](http://www.apache.org/
 - [Sebastian Bassi](https://www.github.com/sbassi)
 - [Virginia Gonazalez](https://www.github.com/virmax)
 - [Gretta Yagudayev](https://www.github.com/gyagu98)
+- Tristan Yang
 - [Diya Sandeep Nair](https://github.com/diyanair30)
 - [Facundo Mercado](https://www.github.com/Facundo1224)
 
