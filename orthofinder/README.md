@@ -14,8 +14,9 @@ This directory contains Dockerfiles for **OrthoFinder**, a tool for accurate inf
 
 Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/orthofinder/general
 
+- **`dnalinux/orthofinder:latest`** — recommended; currently points to `3.0.1b1-conda`
 - **`dnalinux/orthofinder:3.0.1b1-conda`** — OrthoFinder **3.0.1b1** installed from bioconda into its own mamba environment on `debian:trixie-slim`. Multi-arch (`linux/amd64`, `linux/arm64`), runs as the unprivileged user `dnalinux`.
-- **`dnalinux/orthofinder:2.5.5`** — OrthoFinder **2.5.5** built on `python:3.10-slim-bullseye` with helper binaries downloaded at build time. `linux/amd64` only, runs as `root`. The `latest` tag currently points to this image.
+- **`dnalinux/orthofinder:2.5.5`** — OrthoFinder **2.5.5** built on `python:3.10-slim-bullseye` with helper binaries downloaded at build time. `linux/amd64` only, runs as `root`.
 
 ## Differences between the two images
 
