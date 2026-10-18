@@ -99,6 +99,10 @@ Containers are grouped by category. Each name links to its directory, which cont
 - [Cellpose](cellpose/) — generalist algorithm for cell and nucleus segmentation.
 - [DIPY](dipy/) — analysis of diffusion MRI data.
 
+### Literature and text mining
+
+- [PaperJev](paperjev/) — retrieve PubMed papers, summarize PDF themes with a local LLM and filter by relevance.
+
 ### Genome browsers and visualization
 
 - [JBrowse](jbrowse/) — JBrowse 2 command-line interface for setting up genome browsers.
