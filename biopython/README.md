@@ -10,7 +10,8 @@ This directory contains Dockerfiles for **Biopython**, a Python library for bioi
 
 Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/biopython/general
 
-- **`dnalinux/biopython:latest`** — currently points to `1.87-pip`
+- **`dnalinux/biopython:latest`** — currently points to `1.88-pip`
+- **`dnalinux/biopython:1.88-pip`** — Biopython 1.88 installed with `pip` into a virtual environment at `/biopython` on `debian:trixie-slim`. Multi-arch (`linux/amd64`, `linux/arm64`).
 - **`dnalinux/biopython:1.87-pip`** — Biopython 1.87 installed with `pip` into a virtual environment at `/biopython` on `debian:trixie-slim`. Multi-arch (`linux/amd64`, `linux/arm64`).
 - **`dnalinux/biopython:1.85-pip`** — Biopython 1.85 in a virtual environment at `/biopython` on `debian:bookworm-slim`. Multi-arch (`linux/amd64`, `linux/arm64`).
 - **`dnalinux/biopython:1.84-pip`** — Biopython 1.84 in a virtual environment at `/biopython` on `debian:bookworm-slim`. Multi-arch (`linux/amd64`, `linux/arm64`).
@@ -18,8 +19,8 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/biopyth
 ## Building the image
 
 ```bash
-cd 1.87-pip
-docker build -t dnalinux/biopython:1.87-pip .
+cd 1.88-pip
+docker build -t dnalinux/biopython:1.88-pip .
 ```
 
 ## Smoke test
@@ -27,7 +28,7 @@ docker build -t dnalinux/biopython:1.87-pip .
 Biopython is a library rather than a command, and it is installed in a virtual environment, so call that environment's interpreter:
 
 ```bash
-docker run -it --rm dnalinux/biopython:1.87-pip /biopython/bin/python -c 'import Bio; print(Bio.__version__)'
+docker run -it --rm dnalinux/biopython:1.88-pip /biopython/bin/python -c 'import Bio; print(Bio.__version__)'
 ```
 
 ## License
