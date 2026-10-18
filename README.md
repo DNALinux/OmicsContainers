@@ -116,7 +116,7 @@ Containers are grouped by category. Each name links to its directory, which cont
 ### Base images, libraries and runtimes
 
 - [biocontainers](biocontainers/) — base image for BioDocker/BioContainers-derived images.
-- [Python](Python/) — Python 3.13 build without the GIL.
+- [Python](Python/) — free-threaded Python builds without the GIL.
 - [Biopython](biopython/) — Python library for bioinformatics.
 - [Dask](dask/) — flexible library for parallel computing in Python.
 
