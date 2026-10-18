@@ -19,22 +19,31 @@ Citation: Schwengers O., Jelonek L., Dieckmann M. A., Beyvers S., Blom J., Goesm
 
 Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/bakta/general
 
-- **`dnalinux/bakta:1.12.2-conda`** — Bakta **1.12.2** installed from bioconda into its own mamba environment on `debian:trixie-slim`. `linux/amd64` only.
+- **`dnalinux/bakta:1.12.2-conda`** — Bakta **1.12.2** installed from bioconda into its own mamba environment on `debian:trixie-slim`. Multi-arch: `linux/amd64` and `linux/arm64`.
 
-The environment resolves to Bakta 1.12.2 with DIAMOND 2.2.8, BLAST+ 2.17.0+, pyhmmer 0.12.3 (HMMER), Pyrodigal 3.7.1, tRNAscan-SE 2.0.13, Aragorn 1.2.41, Infernal 1.1.5, Piler-CR 1.06 and NCBI AMRFinderPlus 4.2.7, on Python 3.13.16. Exact dependency versions follow whatever the bioconda solver picks at build time.
+The environment resolves to Bakta 1.12.2 with DIAMOND 2.2.8, BLAST+ 2.17.0, pyhmmer 0.12.3 (HMMER), Pyrodigal 3.7.1, tRNAscan-SE 2.0.13, Aragorn 1.2.41, Infernal 1.1.5, Piler-CR 1.06 and NCBI AMRFinderPlus 4.2.7, on Python 3.13.16. Exact dependency versions follow whatever the bioconda solver picks at build time.
 
 ## Note on architectures
 
-This image is `linux/amd64` only, and the Dockerfile fails early if built for anything else. Bakta 1.12.x requires **BLAST+ >= 2.17.0**, but bioconda publishes no `linux-aarch64` build of BLAST+ newer than 2.16.0, so the conda environment cannot be resolved for arm64. Every other dependency (DIAMOND, HMMER/pyhmmer, tRNAscan-SE, Aragorn, Infernal, Piler-CR, AMRFinderPlus) does have an `aarch64` build, so if BLAST+ is ever built for that platform this image can become multi-arch.
+The image is built for `linux/amd64` and `linux/arm64`. On `amd64` the whole environment, BLAST+ included, is resolved and installed by conda.
+
+Bakta 1.12.x requires **BLAST+ >= 2.17.0**, but bioconda publishes no `linux-aarch64` build of BLAST+ newer than 2.16.0. On `arm64` the Dockerfile therefore downloads NCBI's prebuilt `ncbi-blast-2.17.0+-aarch64-linux.tar.gz` (verified against the MD5 published next to it) and wraps its binaries in a small local conda package named `blast`. That package is passed to the same solver together with `bakta`, so the rest of the environment still comes from bioconda/conda-forge and every dependency is resolved normally. `conda list` reports `blast 2.17.0 ncbi_0`, the binaries live in the environment's `bin/`, and `blastn -version` reports `2.17.0+`.
 
 ## Building the image
 
 ```bash
 cd 1.12.2-conda
-docker build --platform linux/amd64 -t dnalinux/bakta:1.12.2-conda .
+docker build -t dnalinux/bakta:1.12.2-conda .
 ```
 
-On an ARM host the explicit `--platform linux/amd64` is required, otherwise the build stops with the architecture message described above.
+To build and publish both architectures in one step:
+
+```bash
+docker buildx build --platform linux/amd64,linux/arm64 \
+    -t dnalinux/bakta:1.12.2-conda --push .
+```
+
+Building `linux/amd64` on an ARM host works through emulation but is slow: the conda solve and the Bakta environment creation run under QEMU.
 
 ## Smoke test (no database needed)
 
