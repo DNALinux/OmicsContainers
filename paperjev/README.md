@@ -10,9 +10,11 @@ The image is the web app: a FastAPI backend serving the built React frontend on 
 
 ## Available images
 
-Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/paperjev/general
+Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/jevpapers/general
 
-- **`dnalinux/paperjev:1.0-src`** — PaperJev **1.0** built from the `v1.0` source archive (SHA-256 pinned in the Dockerfile). The frontend is built with Node 22 and the backend runs on `python:3.10-slim-bookworm` with its dependencies installed from `uv.lock`. Multi-arch (`linux/amd64`, `linux/arm64`), runs as the unprivileged user `dnalinux`, exposes port `8000`.
+- **`dnalinux/jevpapers:1.0-src`** — PaperJev **1.0** built from the `v1.0` source archive (SHA-256 pinned in the Dockerfile). The frontend is built with Node 22 and the backend runs on `python:3.10-slim-bookworm` with its dependencies installed from `uv.lock`. Multi-arch (`linux/amd64`, `linux/arm64`), runs as the unprivileged user `dnalinux`, exposes port `8000`.
+
+The repository also carries a `latest` tag from the upstream PaperJev project; this directory publishes the versioned `1.0-src` tag.
 
 ## Configuration
 
@@ -24,8 +26,8 @@ PaperJev reads two files from its working directory, `/app`:
 Sample files are included in the image as `/app/config.json.sample` and `/app/ollama_config.json.sample`. Do not put credentials in the image; mount the real files at run time. You can extract the samples from a pulled image:
 
 ```bash
-docker run --rm --entrypoint cat dnalinux/paperjev:1.0-src /app/config.json.sample > config.json
-docker run --rm --entrypoint cat dnalinux/paperjev:1.0-src /app/ollama_config.json.sample > ollama_config.json
+docker run --rm --entrypoint cat dnalinux/jevpapers:1.0-src /app/config.json.sample > config.json
+docker run --rm --entrypoint cat dnalinux/jevpapers:1.0-src /app/ollama_config.json.sample > ollama_config.json
 ```
 
 The web app creates the TypeSafe client when it starts, so the container exits if no API key is available. Provide it in `config.json` or with `-e TYPESAFE_API_KEY=...`.
@@ -42,7 +44,7 @@ docker run -d --name paperjev -p 8000:8000 \
     -v $(pwd)/ollama_config.json:/app/ollama_config.json:ro \
     -v paperjev_sessions:/tmp/bio_papers_sessions \
     --add-host=host.docker.internal:host-gateway \
-    dnalinux/paperjev:1.0-src
+    dnalinux/jevpapers:1.0-src
 ```
 
 Then open http://localhost:8000. Session artifacts are kept in the `paperjev_sessions` volume; in-flight sessions live in memory and are lost when the container restarts.
@@ -57,7 +59,7 @@ docker run --rm -it \
     -v $(pwd)/work/config.json:/work/config.json:ro \
     -v $(pwd)/work/ollama_config.json:/work/ollama_config.json:ro \
     --add-host=host.docker.internal:host-gateway \
-    dnalinux/paperjev:1.0-src \
+    dnalinux/jevpapers:1.0-src \
     bash -c 'cd /work && python /app/pubmed_downloader.py --count 200'
 ```
 
