@@ -12,9 +12,8 @@ The image is the web app: a FastAPI backend serving the built React frontend on 
 
 Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/jevpapers/general
 
+- **`dnalinux/jevpapers:latest`** — recommended; currently points to `1.0-src`
 - **`dnalinux/jevpapers:1.0-src`** — PaperJev **1.0** built from the `v1.0` source archive (SHA-256 pinned in the Dockerfile). The frontend is built with Node 22 and the backend runs on `python:3.10-slim-bookworm` with its dependencies installed from `uv.lock`. Multi-arch (`linux/amd64`, `linux/arm64`), runs as the unprivileged user `dnalinux`, exposes port `8000`.
-
-The repository also carries a `latest` tag from the upstream PaperJev project; this directory publishes the versioned `1.0-src` tag.
 
 ## Configuration
 
