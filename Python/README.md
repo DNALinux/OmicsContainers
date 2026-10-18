@@ -16,7 +16,7 @@ The regular CPython 3.15 build still has the GIL. The 3.15 image here uses the f
 
 Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/pythonnogil/general
 
-- **`dnalinux/pythonnogil:latest`** — recommended; currently points to `3.14.8`
+- **`dnalinux/pythonnogil:latest`** — recommended; currently points to `3.15.0`
 - **`dnalinux/pythonnogil:3.15.0`** — free-threaded CPython **3.15.0** (standalone release `20261013`) on `debian:trixie-slim`, with `PYTHON_GIL=0` so the GIL is disabled by default. Multi-arch (`linux/amd64`, `linux/arm64`); the Dockerfile fails the build on any other architecture.
 - **`dnalinux/pythonnogil:3.14.8`** — free-threaded CPython **3.14.8** (standalone release `20261013`) on `debian:trixie-slim`. Multi-arch (`linux/amd64`, `linux/arm64`); the Dockerfile fails the build on any other architecture.
 - **`dnalinux/pythonnogil:3.13.1`** — free-threaded CPython **3.13.1** (standalone release `20250115`) on `debian:bookworm-slim`. Multi-arch (`linux/amd64`, `linux/arm64`); the Dockerfile fails the build on any other architecture.
