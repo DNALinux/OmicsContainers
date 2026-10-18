@@ -22,9 +22,11 @@ Only the Debian build is published: there is no tag on Docker Hub for the conda 
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 1.2.4-deb
-docker build -t dnalinux/clustalo:1.2.4-8-deb .
+docker build -t clustalo:1.2.4-8-deb .
 ```
 
 ## Smoke test

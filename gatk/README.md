@@ -22,9 +22,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/gatk/ge
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 4.6.1.0
-docker build -t dnalinux/gatk:4.6.1.0 .
+docker build -t gatk:4.6.1.0 .
 ```
 
 Both conda Dockerfiles take the version as a build argument (`software_version`), and download the Miniconda installer matching the build machine's architecture (`x86_64` or `aarch64`); any other architecture aborts the build.

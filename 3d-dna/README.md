@@ -20,9 +20,11 @@ The single Dockerfile lives in the `201008/` directory; its labels record `softw
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 201008
-docker build -t dnalinux/3ddna:201008.1 .
+docker build -t 3ddna:201008.1 .
 ```
 
 ## Smoke test

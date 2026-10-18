@@ -21,9 +21,11 @@ The base image is `debian:sid` (Debian unstable), which is a moving release rath
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 2018.9.4
-docker build -t dnalinux/lr_gapcloser:2018.9.4 .
+docker build -t lr_gapcloser:2018.9.4 .
 ```
 
 ## Smoke test

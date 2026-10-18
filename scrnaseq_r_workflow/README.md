@@ -106,11 +106,13 @@ integrated <- FindClusters(integrated, resolution=0.6) %>% RunTSNE(dims=1:35)
 
 ## Building from source
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available image**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 To build the image locally:
 
 ```bash
 cd 1.0.0
-docker build -t dnalinux/scrnaseq-r-workflow:1.0.0 .
+docker build -t scrnaseq-r-workflow:1.0.0 .
 ```
 
 ## License

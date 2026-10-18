@@ -20,9 +20,11 @@ Both images download the upstream source tarball for their tag (`https://github.
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 0.20.0
-docker build -t dnalinux/hifiasm:0.20.0 .
+docker build -t hifiasm:0.20.0 .
 ```
 
 ## Smoke test

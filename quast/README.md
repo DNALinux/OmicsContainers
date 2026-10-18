@@ -17,9 +17,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/quast/g
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 5.3.0-source
-docker build -t dnalinux/quast:5.3.0 .
+docker build -t quast:5.3.0 .
 ```
 
 The Dockerfile installs the build and runtime dependencies from Debian (`g++`, `make`, `libboost-all-dev`, Python 3 with `pip` and `venv`, `python3-matplotlib` with the freetype and libpng headers, a JDK and Perl), unpacks the source into `/quast-5.3.0`, and runs `python3 setup.py install_full` there.

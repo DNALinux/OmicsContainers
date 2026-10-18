@@ -1,4 +1,5 @@
-FROM dnalinux/mitohifi-base:3.2.2
+ARG BASE_IMAGE=dnalinux/mitohifi-base:3.2.2
+FROM ${BASE_IMAGE}
 
 WORKDIR /opt
 

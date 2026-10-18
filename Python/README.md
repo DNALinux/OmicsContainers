@@ -23,19 +23,21 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/pythonn
 
 ## Building an image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 3.15.0-no_GIL
-docker build -t dnalinux/pythonnogil:3.15.0 .
+docker build -t pythonnogil:3.15.0 .
 ```
 
 The same pattern works for the other releases:
 
 ```bash
 cd 3.14.8-no_GIL
-docker build -t dnalinux/pythonnogil:3.14.8 .
+docker build -t pythonnogil:3.14.8 .
 
 cd 3.13.1-no_GIL
-docker build -t dnalinux/pythonnogil:3.13.1 .
+docker build -t pythonnogil:3.13.1 .
 ```
 
 ## Smoke test

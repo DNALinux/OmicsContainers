@@ -19,9 +19,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/spades/
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 4.2.0-src
-docker build -t dnalinux/spades:4.2.0-src .
+docker build -t spades:4.2.0-src .
 ```
 
 Both Dockerfiles configure the build with `-DSPADES_USE_NCBISDK=ON -DSPADES_ENABLE_PROJECTS=all`. The `4.2.0-src` image additionally installs OpenMPI, Python 3 and `python3-dev`.

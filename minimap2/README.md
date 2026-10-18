@@ -20,9 +20,11 @@ Both images set `ENTRYPOINT ["minimap2"]`, so the first argument after the image
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 2.30-src
-docker build -t dnalinux/minimap2:2.30-src .
+docker build -t minimap2:2.30-src .
 ```
 
 ## Smoke test

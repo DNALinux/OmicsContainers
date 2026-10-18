@@ -15,9 +15,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/gfatool
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd final-gt
-docker build -t dnalinux/gfatools:final-gt .
+docker build -t gfatools:final-gt .
 ```
 
 The build downloads `https://github.com/lh3/gfatools/archive/refs/tags/final-gt.tar.gz` and runs `make`. The version is fixed by the `VER` build argument in the Dockerfile.

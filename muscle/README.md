@@ -18,9 +18,11 @@ The version directory in this repository is `5.1.0-1-deb`. No version tag is pub
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 5.1.0-1-deb
-docker build -t dnalinux/muscle:latest .
+docker build -t muscle:latest .
 ```
 
 ## Smoke test

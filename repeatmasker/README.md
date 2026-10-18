@@ -28,9 +28,11 @@ This repository holds a single `4.1.6/` directory, but the Docker Hub repository
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 4.1.6
-docker build -t dnalinux/repeatmasker:4.1.6 .
+docker build -t repeatmasker:4.1.6 .
 ```
 
 ## Smoke test

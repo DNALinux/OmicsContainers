@@ -16,9 +16,11 @@ The version directory is named `6.1.20170106+dfsg2-6.deb`, but the Docker Hub ta
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 6.1.20170106+dfsg2-6.deb
-docker build -t dnalinux/ncbi-tools-bin:6.1.20170106 .
+docker build -t ncbi-tools-bin:6.1.20170106 .
 ```
 
 ## Smoke test

@@ -15,9 +15,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/hmmer/g
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 3.4dfsg-2-deb
-docker build -t dnalinux/hmmer:3.4dfsg-2-deb .
+docker build -t hmmer:3.4dfsg-2-deb .
 ```
 
 ## Smoke test

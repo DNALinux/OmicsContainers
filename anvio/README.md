@@ -14,9 +14,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/anvio/g
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 7.1
-docker build -t dnalinux/anvio:7.1 .
+docker build -t anvio:7.1 .
 ```
 
 ## Smoke test

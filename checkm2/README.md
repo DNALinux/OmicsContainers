@@ -12,9 +12,11 @@ This directory contains Dockerfiles for **CheckM2**, a tool for rapid assessment
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 1.1.0-conda
-docker build -t dnalinux/checkm2:1.1.0-conda .
+docker build -t checkm2:1.1.0-conda .
 ```
 
 ## Smoke test (no database needed)

@@ -47,11 +47,13 @@ The `0.7.19-src` image uses `ENTRYPOINT ["bwa"]`, so the first argument after th
 
 ## Building from source
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 To build the source-based image locally:
 
 ```bash
 cd 0.7.19-src
-docker build -t dnalinux/bwa:0.7.19-src .
+docker build -t bwa:0.7.19-src .
 ```
 
 ## License

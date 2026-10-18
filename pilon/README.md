@@ -20,9 +20,11 @@ The image is a plain Debian install, so the command is `/usr/bin/pilon`.
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 1.24-3-deb
-docker build -t dnalinux/pilon:1.24-3-deb .
+docker build -t pilon:1.24-3-deb .
 ```
 
 ## Smoke test

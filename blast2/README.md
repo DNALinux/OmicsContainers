@@ -53,11 +53,13 @@ The image sets `BLASTDB=/blast/blastdb:/blast/blastdb_custom` and adds `/blast/b
 
 ## Building from source
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 To build a specific version locally:
 
 ```bash
 cd 2.17.0-bin
-docker build -t dnalinux/blast2:2.17.0-bin .
+docker build -t blast2:2.17.0-bin .
 ```
 
 ## License

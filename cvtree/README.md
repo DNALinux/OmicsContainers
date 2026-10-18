@@ -24,11 +24,13 @@ The Dockerfile's `LABEL` records only a Dockerfile `Version=0.2` and a descripti
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 The build context must be the `3.0.0` directory, since the Dockerfile copies `./cvtree`, `./kit` and `./CMakeLists.txt` from it:
 
 ```bash
 cd 3.0.0
-docker build -t dnalinux/cvtree:3.0.0 .
+docker build -t cvtree:3.0.0 .
 ```
 
 ## Smoke test

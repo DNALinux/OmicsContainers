@@ -17,9 +17,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/antisma
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 8.0.4
-docker build -t dnalinux/antismash:8.0.4 .
+docker build -t antismash:8.0.4 .
 ```
 
 ## Smoke test

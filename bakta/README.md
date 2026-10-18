@@ -31,9 +31,11 @@ Bakta 1.12.x requires **BLAST+ >= 2.17.0**, but bioconda publishes no `linux-aar
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 1.12.2-conda
-docker build -t dnalinux/bakta:1.12.2-conda .
+docker build -t bakta:1.12.2-conda .
 ```
 
 To build and publish both architectures in one step:

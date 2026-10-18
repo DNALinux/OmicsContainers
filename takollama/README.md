@@ -21,9 +21,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/takolla
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 0.1-uv
-docker build -t dnalinux/takollama:0.1-uv .
+docker build -t takollama:0.1-uv .
 ```
 
 The build downloads `takollama.tar.bz2` from the `FILE_URL` build argument (default `https://github.com/DNALinux/ai/releases/download/demo/takollama.tar.bz2`), so it needs network access.

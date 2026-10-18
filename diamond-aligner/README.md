@@ -16,9 +16,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/diamond
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 2.1.10-bin
-docker build -t dnalinux/diamond:2.1.10 .
+docker build -t diamond:2.1.10 .
 ```
 
 ## Smoke test

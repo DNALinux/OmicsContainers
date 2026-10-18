@@ -22,9 +22,11 @@ There is no `latest` tag for this repository.
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 2.30-src
-docker build -t dnalinux/bwa-mem2:2.3-src .
+docker build -t bwa-mem2:2.3-src .
 ```
 
 ## Smoke test

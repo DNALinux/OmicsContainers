@@ -19,9 +19,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/ncbi-da
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd datasets/18.18.0
-docker build -t dnalinux/ncbi-datasets:18.18.0 .
+docker build -t ncbi-datasets:18.18.0 .
 ```
 
 The Dockerfile picks the pre-compiled binary with `uname -m`: `linux-amd64` on x86_64 and `linux-arm64` on aarch64 (a 32-bit `linux-arm` build is also handled, for armv7l and armv6l).

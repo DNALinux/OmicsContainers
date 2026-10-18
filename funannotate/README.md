@@ -23,9 +23,11 @@ Docker Hub also holds separate repositories for images that bundle those dataset
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd funannotate
-docker build -t dnalinux/funannotate:latest .
+docker build -t funannotate:latest .
 ```
 
 The database layer has no published tag. It is built explicitly, as `Dockerfile` is the default build file, and tagged locally:

@@ -27,14 +27,16 @@ Code image — `dnalinux/mitohifi-code`, built `FROM dnalinux/mitohifi-base:3.2.
 
 ## Building the images
 
+The images are already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build them yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 The base image is built first; the code image is built from it:
 
 ```bash
 cd 3.2.2
-docker build -t dnalinux/mitohifi-base:3.2.2 .
+docker build -t mitohifi-base:3.2.2 .
 
 cd ../3.2.2-code
-docker build -t dnalinux/mitohifi-code:3.2.2 .
+docker build --build-arg BASE_IMAGE=mitohifi-base:3.2.2 -t mitohifi-code:3.2.2 .
 ```
 
 ## Smoke test

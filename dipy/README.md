@@ -26,11 +26,13 @@ The build exits with an error for any other `TARGETARCH`.
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 The Dockerfile branches on `TARGETARCH`, so the build needs BuildKit (the default in current Docker) or Buildx:
 
 ```bash
 cd 1.10
-docker build -t dnalinux/dipy:1.10.0 .
+docker build -t dipy:1.10.0 .
 ```
 
 To build and push both architectures at once with Buildx:

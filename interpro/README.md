@@ -20,9 +20,11 @@ InterProScan needs its `data/` directory to run an analysis, and the core distri
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 5.69-101.0
-docker build -t dnalinux/interproscan:5.69-101.0 .
+docker build -t interproscan:5.69-101.0 .
 ```
 
 The build downloads `interproscan-core-5.69-101.0.tar.gz` from the EBI FTP, checks its published MD5, and unpacks it to `/opt/interproscan`.

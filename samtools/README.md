@@ -70,11 +70,13 @@ docker run -v $(pwd):/data dnalinux/samtools:1.20-3-deb \
 
 ## Building from source
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 To build the source-based image locally:
 
 ```bash
 cd 1.24-src
-docker build -t dnalinux/samtools:1.24-src .
+docker build -t samtools:1.24-src .
 ```
 
 ## License

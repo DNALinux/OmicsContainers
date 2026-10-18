@@ -16,9 +16,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/fastqc/
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 0.12.1+dfsg-3-deb
-docker build -t dnalinux/fastqc:0.12.1-deb .
+docker build -t fastqc:0.12.1-deb .
 ```
 
 ## Smoke test

@@ -16,9 +16,11 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/trimmom
 
 ## Building the image
 
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+
 ```bash
 cd 0.39dfsg-2-deb
-docker build -t dnalinux/trimmomatic:0.39 .
+docker build -t trimmomatic:0.39 .
 ```
 
 ## Smoke test
