@@ -79,7 +79,7 @@ Containers are grouped by category. Each name links to its directory, which cont
   * [RepeatMasker](/RepeatMasker) — Screen DNA sequences for repeats and low-complexity regions.
 
 ### 6. Comparative Genomics & Phylogenetics
-* [OrthoFinder](/OrthoFinder) — Infer orthogroups, gene trees, and rooted species trees.
+* [OrthoFinder](/orthofinder) — Infer orthogroups, gene trees, and rooted species trees.
 * [Clustal Omega](/Clustal-Omega) — Accurate multiple sequence alignment of protein sequences.
 * [MUSCLE](/MUSCLE) — High-throughput multiple sequence aligner.
 * [PHYLIP](/PHYLIP) — Package of programs for inferring phylogenies.
