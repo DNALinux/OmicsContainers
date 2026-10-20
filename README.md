@@ -124,9 +124,11 @@ Containers are grouped by category. Each name links to its directory, which cont
 - [Biopython](biopython/) — Python library for bioinformatics.
 - [Dask](dask/) — flexible library for parallel computing in Python.
 
-### Other
+### AI applications
 
 - [takollama](takollama/) — Python AI application, packaged with `uv`.
+- [PaperJev](https://github.com/ToyokoLabs/PaperJev) — A set of Python modules for retrieving and analyzing scientific biology papers.
+
 
 ## FAQ
 
