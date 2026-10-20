@@ -4,7 +4,7 @@ This directory contains Dockerfiles for **Bakta**, a tool for the rapid and stan
 
 ## What is Bakta?
 
-**Bakta** (https://github.com/oschwengers/bakta) annotates bacterial genomes and metagenome-assembled genomes (MAGs) rapidly and in a taxonomy-independent way, using alignment-free sequence identification. It produces dbxref-rich output — including small ORFs — in machine-readable JSON plus the usual bioinformatics formats. Installing the bioconda package brings in the programs Bakta drives:
+**Bakta** annotates bacterial genomes and metagenome-assembled genomes (MAGs) rapidly and in a taxonomy-independent way, using alignment-free sequence identification. It produces dbxref-rich output — including small ORFs — in machine-readable JSON plus the usual bioinformatics formats. Installing the bioconda package brings in the programs Bakta drives:
 
 - **Pyrodigal** — gene prediction
 - **tRNAscan-SE** and **Aragorn** — tRNA and tmRNA detection
@@ -106,6 +106,10 @@ Notes:
 - Use the **full** database for the best feature coverage; the light database is for cases where download size, disk space or runtime are constrained.
 - `--threads` should match the cores available to the container; Bakta is mostly single-genome work, so memory is rarely the limit — disk is (each run writes several output files).
 - The output directory must be writable and is created if missing.
+
+## Reference
+
+Schwengers O., Jelonek L., Dieckmann M. A., Beyvers S., Blom J., Goesmann A. (2021). Bakta: rapid and standardized annotation of bacterial genomes via alignment-free sequence identification. Microbial Genomics, 7(11). https://doi.org/10.1099/mgen.0.000685) 
 
 ## License
 
