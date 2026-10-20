@@ -91,7 +91,7 @@ Containers are grouped by category. Each name links to its directory, which cont
   * [anvi'o](/anvio) — Analysis and visualization platform for metagenomics and pangenomics.
   * [CheckM2](/CheckM2) — Assessment of genome bin quality using machine learning.
 * **Transcriptomics & Single-Cell:**
-  * [scRNA-seq R workflow](/scRNA-seq) — R environment for single-cell RNA-seq integration and clustering.
+  * [scRNA-seq R workflow](/scrnaseq_r_workflow) — R environment for single-cell RNA-seq integration and clustering.
   * [BLAZE](/BLAZE) — Barcode identification from long reads for single-cell gene expression.
 * **Proteomics & Mass Spectrometry:**
   * [OpenMS](/OpenMS) — Tools and C++ libraries for MS/MS data analysis.
