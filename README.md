@@ -8,10 +8,6 @@ This is a curated collection of containers for bioinformatics, developed as part
 
 Containers are grouped by category. Each name links to its directory, which contains the Dockerfile(s), available tags and usage notes.
 
-## Available Containers
-
-Containers are grouped by category. Each tool name links to its directory, which contains the `Dockerfile`(s), available tags, and usage notes.
-
 ---
 
 ### Index
@@ -27,7 +23,7 @@ Containers are grouped by category. Each tool name links to its directory, which
 ---
 
 ### 1. Data Access & Literature
-* [NCBI Datasets](./NCBI-Datasets) — Download genome sequences, annotations, and metadata from NCBI.
+* [NCBI Datasets](/NCBI-Datasets) — Download genome sequences, annotations, and metadata from NCBI.
 * [SRA Toolkit](./SRA-Toolkit) — Download and convert sequencing data from the NCBI Sequence Read Archive.
 * [NCBI Tools (legacy)](./NCBI-Tools-legacy) — Legacy NCBI text-based utilities and libraries.
 * [PaperJev](./PaperJev) — Retrieve PubMed papers, summarize PDF themes with local LLMs, and filter by relevance.
