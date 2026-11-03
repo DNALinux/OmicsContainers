@@ -1,7 +1,15 @@
+# syntax=docker/dockerfile:1
 ###################################### METADATA ##############################
-FROM debian:bookworm-slim
+FROM debian:trixie-slim AS binaries
+# UCSC pre-compiled binaries, one per architecture, stored in the repo so the
+# build does not download them.
+COPY bedGraphToBigWig.x86_64 bedGraphToBigWig.aarch64 /binaries/
 
-LABEL base_image="debian:bookworm-slim" \
+FROM debian:trixie-slim
+
+ARG TARGETPLATFORM
+
+LABEL base_image="debian:trixie-slim" \
       software="bedGraphToBigWig" \
       software.version="2.10" \
       about.summary="Convert bedGraph to bigWig file" \
@@ -16,10 +24,13 @@ USER root
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y ca-certificates wget && update-ca-certificates && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
-
-RUN wget https://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/bedGraphToBigWig && \
-    mv bedGraphToBigWig /usr/local/bin/ && \
-    chmod +x /usr/local/bin/bedGraphToBigWig
-
+# The aarch64 binary requires glibc >= 2.38, hence the debian:trixie-slim base.
+# Copy only the binary matching the build platform into the final image.
+RUN --mount=type=bind,from=binaries,source=/binaries,target=/binaries \
+    if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
+        cp /binaries/bedGraphToBigWig.x86_64 /usr/local/bin/bedGraphToBigWig; \
+    elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then \
+        cp /binaries/bedGraphToBigWig.aarch64 /usr/local/bin/bedGraphToBigWig; \
+    else \
+        echo "Unsupported platform: $TARGETPLATFORM" >&2 && exit 1; \
+    fi && chmod +x /usr/local/bin/bedGraphToBigWig
