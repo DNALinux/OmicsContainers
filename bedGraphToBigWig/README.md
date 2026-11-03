@@ -12,15 +12,21 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/bedgrap
 
 - **`dnalinux/bedgraphtobigwig:latest`** — currently points to `2.10-bin`
 - **`dnalinux/bedgraphtobigwig:2.10-bin`** — the pre-compiled `linux.x86_64` binary from UCSC, placed in `/usr/local/bin` on `debian:bookworm-slim`. `linux/amd64` only.
+- **`dnalinux/bedgraphtobigwig:2.10-bin-multiarch`** — the pre-compiled UCSC binary for the build platform (`linux.x86_64` or `linux.aarch64`), placed in `/usr/local/bin` on `debian:trixie-slim`. Multi-arch (`linux/amd64`, `linux/arm64`). The aarch64 build requires glibc ≥ 2.38, so this variant uses trixie instead of bookworm.
 - **`dnalinux/bedgraphtobigwig:2.10`** — an earlier build of the same UCSC 2.10 binary. `linux/amd64` only.
 
 ## Building the image
 
-The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing.
+The image is already published on Docker Hub; pull the tag you need from the repository listed under **Available images**. To build it yourself instead, use any local tag you like — the `dnalinux/` prefix is only used by the project maintainers when publishing. For a multi-arch build use buildx with `--platform` and `--push`:
 
 ```bash
 cd 2.10-bin
 docker build -t bedgraphtobigwig:2.10-bin .
+```
+
+```bash
+cd 2.10-bin-multiarch
+docker buildx build --platform linux/amd64,linux/arm64 -t dnalinux/bedgraphtobigwig:2.10-bin-multiarch --push .
 ```
 
 ## Smoke test
