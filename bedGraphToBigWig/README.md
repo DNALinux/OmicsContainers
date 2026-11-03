@@ -11,7 +11,7 @@ This directory contains Dockerfiles for **bedGraphToBigWig**, a UCSC utility tha
 Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/bedgraphtobigwig/general
 
 - **`dnalinux/bedgraphtobigwig:latest`** — currently points to `2.10-bin`
-- **`dnalinux/bedgraphtobigwig:2.10-bin`** — the pre-compiled UCSC 2.10 binary for the build platform (`linux.x86_64` or `linux.aarch64`, both stored locally in `2.10-bin/`), placed in `/usr/local/bin` on `debian:trixie-slim`. Multi-arch (`linux/amd64`, `linux/arm64`). The aarch64 build requires glibc ≥ 2.38, so this variant uses trixie instead of bookworm.
+- **`dnalinux/bedgraphtobigwig:2.10-bin`** — the pre-compiled UCSC 2.10 binary for the build platform (`linux.x86_64` or `linux.aarch64`, both stored locally in `2.10-bin/`), placed in `/usr/local/bin` on `debian:trixie-slim`. Multi-arch (`linux/amd64`, `linux/arm64`).
 - **`dnalinux/bedgraphtobigwig:2.10`** — an earlier build of the same UCSC 2.10 binary. `linux/amd64` only.
 
 ## Building the image

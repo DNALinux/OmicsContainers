@@ -1,8 +1,6 @@
 # syntax=docker/dockerfile:1
 ###################################### METADATA ##############################
 FROM debian:trixie-slim AS binaries
-# UCSC pre-compiled binaries, one per architecture, stored in the repo so the
-# build does not download them.
 COPY bedGraphToBigWig.x86_64 bedGraphToBigWig.aarch64 /binaries/
 
 FROM debian:trixie-slim
@@ -24,7 +22,7 @@ USER root
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# The aarch64 binary requires glibc >= 2.38, hence the debian:trixie-slim base.
+# debian:trixie-slim provides glibc >= 2.38, needed by the aarch64 binary.
 # Copy only the binary matching the build platform into the final image.
 RUN --mount=type=bind,from=binaries,source=/binaries,target=/binaries \
     if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
