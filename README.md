@@ -113,6 +113,7 @@ Containers are grouped by category. Each name links to its directory, which cont
   * [biocontainers](/biocontainers) — Base image for BioDocker/BioContainers distributions.
   * [Python](/python) — Free-threaded Python builds (GIL-disabled).
   * [Biopython](/biopython) — Python library for computational biology.
+  * [pyBigWig](/pyBigWig) — Python library for reading and writing bigWig files.
   * [Dask](/dask) — Library for parallel computing in Python.
 * **AI Applications:**
   * [takollama](/takollama) — Local LLM integration and agentic AI application for biology (packaged with `uv`).
