@@ -4,7 +4,7 @@ This directory contains Dockerfiles for **bedGraphToBigWig**, a UCSC utility tha
 
 ## What is bedGraphToBigWig?
 
-**bedGraphToBigWig** is one of the UCSC Genome Browser command-line utilities (https://hgdownload.soe.ucsc.edu/downloads.html). It converts a bedGraph file — four-column chrom/start/end/value coverage data — into the indexed bigWig format.
+**bedGraphToBigWig** is one of the UCSC Genome Browser command-line utilities. It converts a bedGraph file — four-column chrom/start/end/value coverage data — into the indexed bigWig format.
 
 ## Available images
 
@@ -35,6 +35,10 @@ docker buildx build --platform linux/amd64,linux/arm64 -t dnalinux/bedgraphtobig
 ```bash
 docker run -it --rm dnalinux/bedgraphtobigwig:2.10-bin bedGraphToBigWig
 ```
+
+## Reference
+
+https://hgdownload.soe.ucsc.edu/downloads.html
 
 ## License
 
