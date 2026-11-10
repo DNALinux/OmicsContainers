@@ -10,6 +10,7 @@ This directory contains a Dockerfile for **DNMTools**, a suite of tools for anal
 
 The image is already published to Docker Hub:
 
+- **`dnalinux/dnmtools:latest`** — currently points to `1.5.1-src`
 - **`dnalinux/dnmtools:1.5.1-src`** — DNMTools 1.5.1 built from the upstream release source tarball, with HTSlib 1.21 also compiled from source, on `alpine:3.24`. Multi-arch (`linux/amd64`, `linux/arm64`).
 
 Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/dnmtools/general
