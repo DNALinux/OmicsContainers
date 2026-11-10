@@ -93,6 +93,8 @@ Containers are grouped by category. Each name links to its directory, which cont
 * **Transcriptomics & Single-Cell:**
   * [scRNA-seq R workflow](/scrnaseq_r_workflow) — R environment for single-cell RNA-seq integration and clustering.
   * [BLAZE](/blaze) — Barcode identification from long reads for single-cell gene expression.
+* **DNA Methylation:**
+  * [DNMTools](/DNMTools) — Analyze DNA methylation from WGBS, RRBS and Nanopore sequencing data.
 * **Proteomics & Mass Spectrometry:**
   * [OpenMS](/openms) — Tools and C++ libraries for MS/MS data analysis.
   * [DIA-NN](/dia-nn) — Processing data-independent acquisition (DIA) proteomics data.
