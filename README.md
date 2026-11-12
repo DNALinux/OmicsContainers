@@ -76,6 +76,7 @@ Containers are grouped by category. Each name links to its directory, which cont
   * [antiSMASH](/antismash) — Detection and analysis of secondary metabolite gene clusters.
   * [InterProScan](/interproscan) — Scan protein sequences against InterPro databases.
   * [KofamScan](/kofamscan) — KEGG Orthology-based gene function annotation via HMMs.
+  * [eggNOG-mapper](/eggnog-mapper) — Functional annotation of sequences using eggNOG orthology assignments.
   * [RepeatMasker](/repeatmasker) — Screen DNA sequences for repeats and low-complexity regions.
 
 ### 6. Comparative Genomics & Phylogenetics
