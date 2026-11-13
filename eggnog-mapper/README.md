@@ -20,6 +20,8 @@ Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/eggnog-
 - **`dnalinux/eggnog-mapper:latest`** — currently points to `2.1.15-src`
 - **`dnalinux/eggnog-mapper:2.1.15-src`** — eggNOG-mapper **2.1.15** installed from the upstream v2.1.15 source tarball on `debian:trixie-slim`, with DIAMOND, HMMER, MMseqs2, Prodigal and the Python dependencies from Debian. `esl-reformat` is built from the HMMER 3.4 Easel sources, which Debian does not package. Multi-arch (`linux/amd64`, `linux/arm64`), runs as `root`.
 
+Upstream publishes 2.1.15 as an annotated git tag (`v2.1.15`, tagged 2026-05-22 with the message "eggNOG-mapper v2.1.15 — final v2 release") but did not create a GitHub Release for it, so it does not appear on the project's Releases page. It is the final v2 release: compared with the `v2.1.14` tag, only the version string and the database download URL in `download_eggnog_data.py` change (the URL fix announced with 2.1.14). Bioconda also packages 2.1.15 from this tag.
+
 The upstream tarball bundles pre-compiled x86-64 copies of DIAMOND, MMseqs2, Prodigal and HMMER. They are deleted during the build so that the architecture-neutral Debian packages are always used.
 
 The image sets `CMD ["emapper.py", "--help"]`, so running it without arguments prints the help text. All scripts from the release are on `PATH`: `emapper.py`, `download_eggnog_data.py`, `create_dbs.py`, `hmm_mapper.py`, `hmm_server.py` and `hmm_worker.py`.
