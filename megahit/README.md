@@ -14,7 +14,7 @@ This directory contains a Dockerfile for **MEGAHIT**, an ultra-fast and memory-e
 Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/megahit/general
 
 - **`dnalinux/megahit:latest`** — currently points to `1.2.9-src`
-- **`dnalinux/megahit:1.2.9-src`** — MEGAHIT **1.2.9** built from the upstream v1.2.9 release tarball on `debian:trixie-slim`, following the upstream Dockerfile but with a multi-stage build and `python3` instead of the end-of-life Ubuntu 18.04 / Python 2 environment. `linux/amd64` only, runs as `root`.
+- **`dnalinux/megahit:1.2.9-src`** — MEGAHIT **1.2.9** built from the upstream v1.2.9 release tarball on `debian:trixie-slim`, following the upstream Dockerfile but with a multi-stage build instead of the end-of-life Ubuntu 18.04 environment. The v1.2.9 driver script is compatible with both Python 2 and Python 3; the image runs it with `python3` because `debian:trixie-slim` has no `python` executable. `linux/amd64` only, runs as `root`.
 
 MEGAHIT 1.2.9 does not build on ARM: its CPU-dispatch header uses x86 `cpuid` inline assembly unconditionally. Upstream added a non-x86 guard after the 1.2.9 release, but there is no newer release, so this image remains `linux/amd64` only (as do the upstream image and the official precompiled release).
 

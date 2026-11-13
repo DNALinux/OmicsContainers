@@ -35,7 +35,7 @@ RUN wget -nv -O megahit.tar.gz \
 
 WORKDIR /build/megahit-${MEGAHIT_VERSION}
 
-# v1.2.9 uses "#!/usr/bin/env python" but is compatible with Python 3;
+# v1.2.9 uses "#!/usr/bin/env python" but is compatible with Python 2 and 3;
 # Debian trixie only ships python3. local_assemble.h uses uint32_t without
 # including <cstdint>, which GCC 14 (trixie) no longer provides transitively.
 RUN sed -i '1s|^#!/usr/bin/env python$|#!/usr/bin/env python3|' src/megahit \
