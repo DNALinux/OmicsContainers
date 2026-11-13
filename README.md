@@ -37,6 +37,7 @@ Containers are grouped by category. Each name links to its directory, which cont
 ### 3. Assembly, Scaffolding & Quality
 * **Assemblers:**
   * [SPAdes](/spades) — Genome assembler for isolate and single-cell datasets.
+  * [MEGAHIT](/megahit) — Ultra-fast, memory-efficient assembler for metagenomes and single genomes.
   * [Hifiasm](/hifiasm) — Haplotype-resolved *de novo* assembler for PacBio HiFi reads.
   * [MitoHiFi](/mitoHiFi) — Assemble mitochondrial genomes from PacBio HiFi reads.
 * **Scaffolding & Finishing:**
