@@ -6,24 +6,24 @@
 # of the final image, and points the Python driver script at python3 (trixie
 # has no "python" executable).
 #
-# MEGAHIT 1.2.9 only builds on x86-64: its CPU dispatch header uses inline
-# cpuid assembler unconditionally. Upstream added a non-x86 guard after the
-# release, but no newer release exists, so this image is linux/amd64 only.
+# The v1.2.9 source only compiles on x86-64 (its CPU dispatch header uses
+# inline cpuid assembler unconditionally). The image applies the upstream
+# fix for other architectures, commit 4687e4f72844 ("Add support for
+# non-x86_64 architectures", 2024-03-27, fixes voutcn/megahit#320), from
+# megahit-1.2.9-non-x86.patch in this directory, so the image builds for
+# both linux/amd64 and linux/arm64.
 
 FROM debian:trixie-slim AS builder
 
 ARG MEGAHIT_VERSION=1.2.9
-ARG TARGETARCH
 
-RUN if [ "$TARGETARCH" != "amd64" ]; then \
-        echo "MEGAHIT ${MEGAHIT_VERSION} supports linux/amd64 only" >&2; \
-        exit 1; \
-    fi
+COPY megahit-1.2.9-non-x86.patch /build/megahit-1.2.9-non-x86.patch
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         ca-certificates \
         cmake \
+        patch \
         wget \
         zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
@@ -38,7 +38,8 @@ WORKDIR /build/megahit-${MEGAHIT_VERSION}
 # v1.2.9 uses "#!/usr/bin/env python" but is compatible with Python 2 and 3;
 # Debian trixie only ships python3. local_assemble.h uses uint32_t without
 # including <cstdint>, which GCC 14 (trixie) no longer provides transitively.
-RUN sed -i '1s|^#!/usr/bin/env python$|#!/usr/bin/env python3|' src/megahit \
+RUN patch -p1 < /build/megahit-1.2.9-non-x86.patch \
+    && sed -i '1s|^#!/usr/bin/env python$|#!/usr/bin/env python3|' src/megahit \
     && sed -i 's|#include <string>|#include <cstdint>\n#include <string>|' src/localasm/local_assemble.h \
     && mkdir build \
     && cd build \

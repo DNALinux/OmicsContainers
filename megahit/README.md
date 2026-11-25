@@ -14,9 +14,9 @@ This directory contains a Dockerfile for **MEGAHIT**, an ultra-fast and memory-e
 Docker Hub repository: https://hub.docker.com/repository/docker/dnalinux/megahit/general
 
 - **`dnalinux/megahit:latest`** — currently points to `1.2.9-src`
-- **`dnalinux/megahit:1.2.9-src`** — MEGAHIT **1.2.9** built from the upstream v1.2.9 release tarball on `debian:trixie-slim`, following the upstream Dockerfile but with a multi-stage build instead of the end-of-life Ubuntu 18.04 environment. The v1.2.9 driver script is compatible with both Python 2 and Python 3; the image runs it with `python3` because `debian:trixie-slim` has no `python` executable. `linux/amd64` only, runs as `root`.
+- **`dnalinux/megahit:1.2.9-src`** — MEGAHIT **1.2.9** built from the upstream v1.2.9 release tarball on `debian:trixie-slim`, following the upstream Dockerfile but with a multi-stage build instead of the end-of-life Ubuntu 18.04 environment. The v1.2.9 driver script is compatible with both Python 2 and Python 3; the image runs it with `python3` because `debian:trixie-slim` has no `python` executable. Multi-arch (`linux/amd64` + `linux/arm64`), runs as `root`.
 
-MEGAHIT 1.2.9 does not build on ARM: its CPU-dispatch header uses x86 `cpuid` inline assembly unconditionally. Upstream added a non-x86 guard after the 1.2.9 release, but there is no newer release, so this image remains `linux/amd64` only (as do the upstream image and the official precompiled release).
+MEGAHIT 1.2.9 does not compile on ARM out of the box: its CPU-dispatch header uses x86 `cpuid` inline assembly unconditionally, and the CMake flags hardcode `-mbmi2`/`-mpopcnt`. Upstream added a non-x86 guard and conditional flags after the 1.2.9 release (commit `4687e4f72844`, fixing [issue #320](https://github.com/voutcn/megahit/issues/320)); the build applies that commit as `1.2.9-src/megahit-1.2.9-non-x86.patch`, so both architectures build natively. On x86-64 the patch changes nothing: the `cpuid`-based POPCNT/BMI2 runtime dispatch stays active.
 
 The image sets `ENTRYPOINT ["megahit"]` and `CMD ["--help"]`, so arguments after the image name are passed straight to MEGAHIT:
 
@@ -36,10 +36,15 @@ The image is already published on Docker Hub; pull the tag you need from the rep
 
 ```bash
 cd 1.2.9-src
-docker build --platform linux/amd64 -t megahit:1.2.9-src .
+docker build -t megahit:1.2.9-src .
 ```
 
-The `--platform linux/amd64` is required on ARM hosts (including Apple silicon); on an x86-64 host it can be omitted. There is no arm64 build because of the 1.2.9 source limitation described above.
+The build targets the host architecture by default, like the other images in this project. To produce both architectures at once and push the manifest list to Docker Hub, the maintainers use:
+
+```bash
+docker buildx build --platform linux/amd64,linux/arm64 \
+    -t dnalinux/megahit:1.2.9-src -t dnalinux/megahit:latest --push .
+```
 
 ## Smoke test
 
@@ -51,7 +56,7 @@ docker run --rm dnalinux/megahit:1.2.9-src --test --kmin-1pass
 docker run --rm dnalinux/megahit:1.2.9-src --version
 ```
 
-On ARM hosts Docker runs the `linux/amd64` image through emulation; add `--platform linux/amd64` to `docker run` if you want to silence the platform warning.
+Docker picks the image matching the host architecture automatically, so no extra flags are needed on either x86-64 or ARM hosts.
 
 ## Usage
 
